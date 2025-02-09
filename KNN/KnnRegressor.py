@@ -9,7 +9,6 @@ class KnnRegressor:
         self.X = None
         self.y = None
         self.dist_function = dist
-        # self.colors = np.array(["black", "r", "g", "b"])
 
     def fit(self, X, y):
         self.X = X
@@ -50,4 +49,5 @@ class KnnRegressor:
         return predictions
 
     def plot(self, x, y):
-        pass
+        plt.scatter(self.X, self.y, c="b")
+        plt.scatter(x, y, marker="x", c="r")
